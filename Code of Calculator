@@ -1,0 +1,104 @@
+using System;
+
+namespace Programcode
+{
+    class Program
+    {
+        static void Main()
+        {
+            bool Stop = false;
+            while (Stop == false)
+            {
+                {
+                    long i1 = 0;
+                    long i2 = 0;
+                    string znak;
+                    string stop2;
+
+                    Console.WriteLine("Начнём?");
+                    string wath = Console.ReadLine();
+                    if (wath == "yes" || wath == "да")
+                    {
+                        Console.WriteLine("дай номер");
+                        i1 = Int64.Parse(Console.ReadLine());
+                        Console.WriteLine("дай номер 2");
+                        i2 = Int64.Parse(Console.ReadLine());
+                        Console.WriteLine("Нужен знак действия");
+                        znak = Console.ReadLine();
+                        Console.WriteLine("Умножаю Планирую...");
+                        if (znak == "+")
+                        {
+                            Console.Write("Результат:");
+                            Console.WriteLine(i1 + i2);
+                            Console.WriteLine("Хочешь остановиться?");
+                            stop2 = Console.ReadLine();
+                            if (stop2 == "no" || stop2 == "нет")
+                            {
+                                Stop = false;
+                            }
+
+                            if (stop2 == "yes" || stop2 == "да")
+                            {
+                                Stop = true;
+                            }
+                        }
+                        else if (znak == "/" || znak == ":")
+                        {
+                            Console.Write("Результат:");
+                            Console.WriteLine(i1 / i2);
+                            Console.WriteLine("Хочешь остановиться?");
+                            stop2 = Console.ReadLine();
+                            if (stop2 == "no" || stop2 == "нет")
+                            {
+                                Stop = false;
+                            }
+
+                            if (stop2 == "yes" || stop2 == "да")
+                            {
+                                Stop = true;
+                            }
+                        }
+                        else if (znak == "*")
+                        {
+                            Console.Write("Результат:");
+                            Console.WriteLine(i1 * i2);
+                            Console.WriteLine("Хочешь остановиться?");
+                            stop2 = Console.ReadLine();
+                            if (stop2 == "no" || stop2 == "нет")
+                            {
+                                Stop = false;
+                            }
+
+                            if (stop2 == "yes" || stop2 == "да")
+                            {
+                                Stop = true;
+                            }
+                        }
+                        else if (znak == "-")
+                        {
+                            Console.Write("Результат:");
+                            Console.WriteLine(i1 - i2);
+                            Console.WriteLine("Хочешь остановиться?");
+                            stop2 = Console.ReadLine();
+                            if (stop2 == "no" || stop2 == "нет")
+                            {
+                                Stop = false;
+                            }
+
+                            if (stop2 == "yes" || stop2 == "да")
+                            {
+                                Stop = true;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("пошёл нахуй");
+                        Stop = true;
+                    }
+                }
+
+            }
+        }
+    }
+}
